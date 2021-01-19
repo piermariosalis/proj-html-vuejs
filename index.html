@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<title>Boolean Project with VueJS</title>
+
+	<!-- /////////////////////////// -->
+	<!-- STYLE CSS -->
+	<style>
+		/*RESET*/
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+
+		}
+
+        body {
+            background: blue;
+
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+		/*UTILITY CLASSES*/
+		.disp_flex{
+			display: flex;
+		}
+
+		.flex_column {
+			flex-direction: column;
+		}
+
+		/*/UTILITY CLASSES*/
+
+        /*HEADER & NAVBAR*/
+        header {
+            width: 100vw;
+            border-bottom: 1px solid black;
+        }
+        nav {
+            width: 1400px;
+            height: 70px;
+            margin: auto;
+            background: white;
+        }
+
+        .logo_nav, .links_nav, .icons_nav {
+            width: calc(100% / 3);
+        }
+
+        .jumbotron {
+            width: 1400px;
+            margin: auto;
+            background: white;
+
+        }
+
+
+	</style>
+	<!-- /STYLE CSS -->
+	<!-- /////////////////////////// -->
+
+</head>
+<body>
+	<!-- NAVBAR & HEADER -->
+	
+	<header>
+     <nav class="disp_flex">
+         <div class="logo_nav">
+             <img src="" alt="">
+             Landrick
+         </div>
+         <div class="links_nav">
+            <ul>
+             <li>Home</li>
+             <li>Landing</li>
+             <li>Pages</li>
+             <li>Docs</li>
+         </ul>
+         </div>
+         <div class="icons_nav">
+             Icona Uno
+             Icona Due
+             Icona Tre
+             Icona Quattro
+         </div>
+     </nav> 
+     <div class="jumbotron">
+         <div class="left_tron">
+             Development
+             <h3>A Complete Developer Toolset</h3>
+             <p>Lorem ipsum dolor sit amet consectetur.</p>
+             <button>Get Started</button>
+             <button>Documentation</button>
+             <p>Current Version</p>
+
+         </div>
+     </div>  
+    </header>
+	<!-- /NAVBAR & HEADER -->
+
+	<!-- MAIN & SECTIONS -->
+	<main>
+		<section class="keyfeatures">
+            <h3>Key Features</h3>
+      <p>Start Working...</p>  
+
+        </section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+	</main>
+	<!-- /MAIN & SECTIONS -->
+
+	<!-- FOOTER -->
+	<footer></footer>
+	<!-- /FOOTER -->
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
