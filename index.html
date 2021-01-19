@@ -37,6 +37,10 @@
 			flex-direction: column;
 		}
 
+        .flex_center {
+            justify-content: center;
+        }
+
 		/*/UTILITY CLASSES*/
 
         /*HEADER & NAVBAR*/
@@ -45,7 +49,7 @@
             border-bottom: 1px solid black;
         }
         nav {
-            width: 1400px;
+            width: 1200px;
             height: 70px;
             margin: auto;
             background: white;
@@ -56,12 +60,42 @@
         }
 
         .jumbotron {
-            width: 1400px;
+            width: 1200px;
             margin: auto;
             background: white;
 
         }
 
+        /*MAIN & SECTIONS*/
+
+        main {
+            width: 100vw;
+        }
+
+        .partners {
+            width: 1200px;
+            height: 80px;
+            margin: auto;
+            background: white;
+            line-height: 80px;
+
+        }
+        .key_features {
+            width: 1200px;
+            margin: auto;
+            background: white;
+        }
+
+        .left_key_features {
+            width: calc(100% / 2);
+            height: 120px;
+        }
+        .key_features_icons {
+            width: 100%;
+        }
+        .feature {
+            width: calc(100% / 4);
+        }
 
 	</style>
 	<!-- /STYLE CSS -->
@@ -95,7 +129,7 @@
      <div class="jumbotron">
          <div class="left_tron">
              Development
-             <h3>A Complete Developer Toolset</h3>
+             <h2>A Complete Developer Toolset</h2>
              <p>Lorem ipsum dolor sit amet consectetur.</p>
              <button>Get Started</button>
              <button>Documentation</button>
@@ -108,12 +142,51 @@
 
 	<!-- MAIN & SECTIONS -->
 	<main>
-		<section class="keyfeatures">
-            <h3>Key Features</h3>
-      <p>Start Working...</p>  
+		<div class="partners disp_flex flex_center">
+            Amazon
+            Google
+            Lenovo
+            PayPal
+            Shopify
+            Spotify
+        </div>
+		<section class="key_features">
+            <div class="left_key_features">
+                <h3>Key Features</h3>
+            <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+            </div>
+            <div class="key_features_icons disp_flex">
+                <div class="feature">
+                    Icons
+                    <h5>Modular</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                    </p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="feature">
+                    Icons
+                    <h5>Modular</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                    </p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="feature">
+                    Icons
+                    <h5>Modular</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                    </p>
+                    <a href="">Read More</a>
+                </div>
+                <div class="feature">
+                    Icons
+                    <h5>Modular</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                    </p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
 
         </section>
-		<section></section>
 		<section></section>
 		<section></section>
 		<section></section>
