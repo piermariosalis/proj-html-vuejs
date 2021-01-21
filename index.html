@@ -12,217 +12,227 @@
         <!-- /////////////////////////// -->
         <!-- STYLE CSS -->
         <style>
-            /*RESET*/
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
-            text-decoration: none;
-            }
-            body {
-            background: blue;
-            }
-            li {
-            list-style: none;
-            display: inline-block;
-            }
-            /*UTILITY CLASSES*/
-            .disp_flex{
-            display: flex;
-            }
-            .flex_column {
-            flex-direction: column;
-            }
-            .flex_center {
-            justify-content: center;
-            }
-            /*/UTILITY CLASSES*/
-            /*HEADER & NAVBAR*/
-            header {
-            width: 100vw;
-            border-bottom: 1px solid #e9ecef;
-            background: #F8F9FC;
-            }
-            nav {
-            width: 1100px;
-            height: 70px;
-            margin: auto;
-            background: #F8F9FC;
-            }
-            .logo_nav, .links_nav, .icons_nav {
-            width: calc(100% / 3);
-            }
-            .logo_nav img {
-            width: 130px;
-            margin-left: 10px;
-            }
-            .links_nav {
-            align-items: center;
-            }
-            .links_nav a {
-            font-weight: 700;
-            font-size: 14px;
-            color:#3c4858;
-            }
-            .icons_nav {
-            justify-content: flex-end;
-            align-items: center;
-            }
-            .icons_nav i {
-            margin: 0 10px;
-            color:#3c4858;
-            }
-            .icons_nav i:hover {
-            color: #2F55D4;
-            }
-            .jumbotron {
-            width: 1100px;
-            height: 650px;
-            margin: auto;
-            background: #F8F9FC;
-            align-items: center;
-            }
-            .left_tron {
-            width: calc(100% / 2);
-            }
-            .left_tron h2 {
-            font-size: 42px;
-            margin: 8px 0;
-            }
-            .jumbo_image {
-            width: calc(100% / 2);
-            }
-            .jumbo_image img {
-            width: 470px;
-            }
-            /*MAIN & SECTIONS*/
-            main {
-            width: 100vw;
-            background: white;
-            }
-            .partners {
-            width: 1100px;
-            height: 80px;
-            margin: auto;
-            background: white;
-            line-height: 80px;
-            }
-            .partners img {
-            padding: 28px 0;
-            }
-            .key_features, .quick_start {
-            width: 1100px;
-            margin: auto;
-            background: white;
-            }
-            .key_features {
-            height: 750px;
-            
-            }
-            .left_key_features {
-            width: calc(100% / 2);
-            height: 120px;
-            margin-bottom: 60px;
-            }
-            .key_features_icons {
-            width: 100%;
-            height: 150px;
-            
-            
-            }
-            .feature h5 {
-            font-size: 17px;
-            font-weight: 600;
-            color: #3c4858;
-            }
-            .feature {
-            width: calc(100% / 4);
-            height: 280px;
-            border: 0.2rem solid #F8F9FC;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 0 12px;
-            }
-            .feature:hover {
-            background-color:rgba(25, 181, 254, 0.3);
-            }
-            .feature > i:first-child {
-            font-size: 25px;
-            color: #2F55D4;
-            background: #EAEEFB;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            }
-            .feature > i:last-child {
-            font-size: 12px;
-            font-weight: 600;
-            color: #2f55d4 ;
-            }
-            .feature p {
-            margin: 20px 0;
-            color: #8492a6
-            }
-            .feature a {
-            margin-right: 10px;
-            color: #2f55d4 ;
-            }
-            .quick_start_content {
-            width: 800px;
-            }
-            .quick_start_content h6 {
-            text-align: center;
-            }
-            .build_tools {
-            width: 1100px;
-            height: 250px;
-            margin: auto;
-            background: white;
-            }
-            .left, .right {
-            width: calc(100% / 2);
-            height: 100%;
-            }
-            .rates {
-            width: 1100px;
-            margin: auto;
-            background: white;
-            }
-            .rates_details_title {
-            width: 800px;
-            margin: auto;
-            text-align: center;
-            font-size: 20px;
-            }
-            .rates_details_description {
-            width: 500px;
-            margin: auto;
-            text-align: center;
-            }
-            .prices {
-            width: 1100px;
-            margin: auto;
-            background: white;
-            }
-            .plan {
-            width: calc(100% / 3);
-            background: white;
-            }
-            .get_started {
-            width: 1100px;
-            margin: auto;
-            background: white;
-            }
-            .get_started_content {
-            width: 800px;
-            height: 200px;
-            margin: auto;
-            text-align: center;
-            }
-            .navLinks{
-            text-decoration: none;
-            }
+        /*RESET*/
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        }
+        body {
+        overflow-x: hidden;
+        }
+        li {
+        list-style: none;
+        display: inline-block;
+        }
+        /*UTILITY CLASSES*/
+        .disp_flex{
+        display: flex;
+        }
+        .flex_column {
+        flex-direction: column;
+        }
+        .flex_center {
+        justify-content: center;
+        }
+        /*/UTILITY CLASSES*/
+        /*HEADER & NAVBAR*/
+        header {
+        width: 100vw;
+        border-bottom: 1px solid #e9ecef;
+        background: #F8F9FC;
+        }
+        nav {
+        width: 1100px;
+        height: 70px;
+        margin: auto;
+        background: #F8F9FC;
+        }
+        .logo_nav, .links_nav, .icons_nav {
+        width: calc(100% / 3);
+        }
+        .logo_nav img {
+        width: 130px;
+        margin-left: 10px;
+        }
+        .links_nav {
+        align-items: center;
+        }
+        .links_nav a {
+        font-weight: 700;
+        font-size: 14px;
+        color:#3c4858;
+        }
+        .icons_nav {
+        justify-content: flex-end;
+        align-items: center;
+        }
+        .icons_nav i {
+        margin: 0 10px;
+        color:#3c4858;
+        }
+        .icons_nav i:hover {
+        color: #2F55D4;
+        }
+        .jumbotron {
+        width: 1100px;
+        height: 650px;
+        margin: auto;
+        background: #F8F9FC;
+        align-items: center;
+        }
+        .left_tron {
+        width: calc(100% / 2);
+        }
+        .left_tron h2 {
+        font-size: 42px;
+        margin: 8px 0;
+        }
+        .jumbo_image {
+        width: calc(100% / 2);
+        }
+        .jumbo_image img {
+        width: 470px;
+        }
+        /*MAIN & SECTIONS*/
+        main {
+        width: 100vw;
+        background: white;
+        }
+        .partners {
+        width: 1100px;
+        height: 80px;
+        margin: auto;
+        background: white;
+        line-height: 80px;
+        }
+        .partners img {
+        padding: 28px 0;
+        }
+        .key_features, .quick_start {
+        width: 1100px;
+        margin: auto;
+        background: white;
+        }
+        .key_features {
+        height: 750px;
+        
+        }
+        .left_key_features {
+        width: calc(100% / 2);
+        height: 120px;
+        margin-bottom: 60px;
+        }
+        .key_features_icons {
+        width: 100%;
+        height: 150px;
+        
+        
+        }
+        .feature h5 {
+        font-size: 17px;
+        font-weight: 600;
+        color: #3c4858;
+        }
+        .feature {
+        width: calc(100% / 4);
+        height: 280px;
+        border: 0.2rem solid #F8F9FC;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 0 12px;
+        }
+        .feature:hover {
+        background-color:rgba(25, 181, 254, 0.3);
+        }
+        .feature > i:first-child {
+        font-size: 25px;
+        color: #2F55D4;
+        background: #EAEEFB;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        }
+        .feature > i:last-child {
+        font-size: 12px;
+        font-weight: 600;
+        color: #2f55d4 ;
+        }
+        .feature p {
+        margin: 20px 0;
+        color: #8492a6
+        }
+        .feature a {
+        margin-right: 10px;
+        color: #2f55d4 ;
+        }
+        .quick_start_content {
+        width: 600px;
+        align-self: center;
+        }
+        .quick_start_content h6 {
+        text-align: center;
+        }
+        .npm h5{
+        width: calc(100%/4);
+        background: #4F5A69;
+        padding: 8px 0;
+        margin: auto;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        font-weight: 400;
+        }
+        
+        .build_tools {
+        width: 1100px;
+        height: 250px;
+        margin: auto;
+        background: white;
+        }
+        .left, .right {
+        width: calc(100% / 2);
+        height: 100%;
+        }
+        .rates {
+        width: 1100px;
+        margin: auto;
+        background: white;
+        }
+        .rates_details_title {
+        width: 800px;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        }
+        .rates_details_description {
+        width: 500px;
+        margin: auto;
+        text-align: center;
+        }
+        .prices {
+        width: 1100px;
+        margin: auto;
+        background: white;
+        }
+        .plan {
+        width: calc(100% / 3);
+        background: white;
+        }
+        .get_started {
+        width: 1100px;
+        margin: auto;
+        background: white;
+        }
+        .get_started_content {
+        width: 800px;
+        height: 200px;
+        margin: auto;
+        text-align: center;
+        }
         </style>
         <!-- /STYLE CSS -->
         <!-- /////////////////////////// -->
@@ -266,7 +276,6 @@
             </div>
         </header>
         <!-- /NAVBAR & HEADER -->
-
         <!-- MAIN & SECTIONS -->
         <main>
             <div class="partners disp_flex flex_center">
@@ -313,18 +322,33 @@
                     </div>
                 </div>
             </section>
-            <section class="quick_start disp_flex flex_center">
-                <div class="quick_start_content">
-                    <h6><b>Quickstart</b></h6>
-                    <p>Start working with Landrick that can provide everything you need to generate awarness, drive traffic, connect.</p>
-                    <h6>Immagine</h6>
-                    <h6>Immagine</h6>
-                    <h6>Immagine</h6>
-                    <h6>Immagine</h6>
-                    <h6>Immagine</h6>
-                    <h6>Immagine</h6>
+            <section class="quick_start disp_flex flex_column flex_center">
+                <div class="quick_start_content disp_flex flex_column">
+                    
+                    <h6 style="font-size: 16px; font-weight: 600; color:#2f55d4; ">Quickstart</h6>
+                    <h4 style="font-size: 30px; font-weight: 600; color:#161c2d; text-align: center; margin-top: 10px;">Awesome isn't it? Let's dive in!</h4>
+                    <p style="font-size: 16px; color:#849FC4; text-align: center; margin-bottom: 65px;">Start working with <b style="color: #2f55d4 ">Landrick</b> that can provide everything you need to generate awarness, drive traffic, connect.</p>
+                    
+                    
                     <!-- <img src="" alt=""> -->
-                    icona Organize you data Icona Work With any team
+                    
+                    
+                </div>
+                <div  class='disp_flex' style="width: 700px; height: 120px; border-radius: 6px; background: #3c4858; align-self: center;">
+                    <div style='width: 100%; display: flex; align-self: flex-start; margin-top: 20px; padding: 0 20px; border-radius: 50%;' class="npm">
+                        <h5 style="    background: #3C4858; border: 3px solid #4F5A69;">npm</h5>
+                        <h5>nuget</h5>
+                        <h5>spm</h5>
+                        <h5>github</h5>
+                        
+                    </div>
+                    
+                </div>
+                <div style="width: 700px; margin: auto; margin-top: 20px">
+                    <i style="color: #2ECDB8;" class="far fa-check-circle"></i>
+                    <p style="display: inline-block; color: #8492BA">Organize your data</p>
+                    <i style="color: #2ECDB8; margin-left: 50px;" class="far fa-check-circle"></i>
+                    <p style="display: inline-block; color: #8492BA">Organize your data</p>
                 </div>
             </section>
             <section class="build_tools disp_flex">
@@ -419,7 +443,6 @@
             </section>
         </main>
         <!-- /MAIN & SECTIONS -->
-        
         <!-- FOOTER -->
     <footer></footer>
     <!-- /FOOTER -->
