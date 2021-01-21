@@ -204,6 +204,7 @@
         }
         .rates {
         width: 1100px;
+        height: 900px;
         margin: auto;
         background: white;
         }
@@ -225,6 +226,7 @@
         }
         .plan {
         width: calc(100% / 3);
+        height: 450px;
         background: white;
         }
         .get_started {
@@ -238,6 +240,41 @@
         margin: auto;
         text-align: center;
         }
+
+        /*FOOTER*/
+        footer {
+            width: 100vw;
+            background: #202942;
+        }
+
+        .footer_content {
+            width: 1100px;
+            height: 800px;
+            margin: auto;
+            display: flex;
+
+
+
+        }
+        .footer_columns {
+            width: calc(100% / 3);
+            height: 100%;
+
+
+        }
+        .footer_columns li a {
+            color: #adb5bd;
+        }
+
+        .footer_columns h5 {
+            color: #f8f9fc
+        }
+
+        .footer_columns i {
+            color: #adb5bd;
+            
+        }
+        /*/FOOTER*/
         </style>
         <!-- /STYLE CSS -->
         <!-- /////////////////////////// -->
@@ -374,19 +411,19 @@
                     <img style="width: 500px;align-self: center;" src="./assets/img/1.png" alt="">
                 </div>
             </section>
-            <section class="rates">
+            <section style="margin-top: 50px;" class="rates">
                 <div class="rates_details_title">
-                    <h2>Our Rates for developer from landrick team</h2>
+                    <h4 style="font-size: 30px; font-weight: 500;">Our Rates for developer from landrick team</h4>
                 </div>
-                <div class="rates_details_description">
-                    <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                <div style="margin-top: 20px;" class="rates_details_description">
+                    <p style="font-size: 16px; font-weight: 400; color: #8492a6 ">Start working with <b style="color:#2f55d4 ">Landrick</b> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
                 <div class="prices disp_flex">
                     <div class="plan">
-                        <button>Basic</button>
-                        <h2>$9.00</h2>
-                        <p>Per Month</p>
-                        <p>All the basics for businesses that are just getting started.</p>
+                        <span style="background: #EAEEFB; margin-bottom: 80px; padding: 12px 22px; border-radius:50px; color: #2f55d4">Basic</span>
+                        <h2 style="margin-top: 30px; font-size: 36px; ">$9.00</h2>
+                        <p style="font-size: 16px; font-weight: 400; color: #8492a6 " >Per Month</p>
+                        <p style="font-size: 16px; font-weight: 400; color: #8492a6 ">All the basics for businesses that are just getting started.</p>
                         <ul>
                             <li>Full Access</li>
                             <li>Enhanced Security</li>
@@ -435,17 +472,78 @@
             <section>
                 <div class="get_started">
                     <div class="get_started_content">
-                        <h3>Want to be among the first to find out?</h3>
-                        <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                        <input type="email" placeholder="Email Address">
-                        <button>Get Started</button>
+                        <h4 style="font-size: 30px; font-weight: 600; ">Want to be among the first to find out?</h4>
+                        <p style="font-size: 16px; font-weight: 400; color: #8492a6; margin-bottom: 28px;">Start working with <b style="color: #2f55d4">Landrick</b> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <div>
+                            <input  type="email" placeholder="Email Address">
+                            <span >Get Started</span>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
         </main>
         <!-- /MAIN & SECTIONS -->
         <!-- FOOTER -->
-    <footer></footer>
+    <footer id='vue_footer'>
+        <div  class="footer_content  ">
+            <div  class="footer_columns">
+                <img style="width: 130px; margin-top: 20px;" src="./assets/img/logo-light.png" alt="">
+                <p style="color: #adb5bd">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-linkedin"></i>
+
+            </div>
+            <div class="footer_columns">
+                <div style="width: calc(100% / 2)%;" class="company disp_flex flex_column">
+                    <h5>Company</h5>
+                    <ul>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='About'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Services'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Team'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Pricing'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Project'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Careers'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Blog'></li>
+                        <i class="fas fa-chevron-right"></i>
+                        <li v-html='Login'></li>
+
+                    </ul>
+                </div>
+                <div style="width: calc(100% / 2), margin:auto; color:" class="userfull_links disp_flex flex_column"></div>
+                <h5>Usefull Links</h5>
+                <i style="color:#adb5bd" class="fas fa-chevron-right"></i>
+                <li style="color:#adb5bd" v-html='Terms'></li>
+                <i style="color:#adb5bd" class="fas fa-chevron-right"></i>
+                <li style="color:#adb5bd" v-html='Privacy'></li>
+                <i style="color:#adb5bd" class="fas fa-chevron-right"></i>
+                <li style="color:#adb5bd"v-html='Documentation'></li>
+                <i style="color:#adb5bd" class="fas fa-chevron-right"></i>
+                <li style="color:#adb5bd" v-html='Changelog'></li>
+                <i style="color:#adb5bd" class="fas fa-chevron-right"></i>
+                <li style="color:#adb5bd" v-html='Components'></li>
+
+            </div>
+            <div class="footer_columns">
+                <h5 style="color: #f8f9fc; font-size: 20px; font-weight: 600;">Newsletter</h5>
+                <p style="font-size: 16px; font-weight: 500; color: #adb5bd; ">Sign up and receive the latest tips via email.</p>
+                <div style="font-size: 16px; font-weight: 800; color: #adb5bd">Write your mail <b style="color: red;" >*</b></div>
+                <input type="email" placeholder="Your email:">
+                <div>Subscribe</div>
+            </div>
+        </div>
+       
+
+    </footer>
     <!-- /FOOTER -->
     <script src="./assets/js/main.js"></script>
 </body>
