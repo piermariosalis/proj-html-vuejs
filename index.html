@@ -14,170 +14,215 @@
         <style>
             /*RESET*/
             * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
-        text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            text-decoration: none;
             }
-        body {
-        background: blue;
-        }
-        li {
-        list-style: none;
-        display: inline-block;
-        }
+            body {
+            background: blue;
+            }
+            li {
+            list-style: none;
+            display: inline-block;
+            }
             /*UTILITY CLASSES*/
             .disp_flex{
-                display: flex;
+            display: flex;
             }
             .flex_column {
-                flex-direction: column;
+            flex-direction: column;
             }
-        .flex_center {
-        justify-content: center;
-        }
+            .flex_center {
+            justify-content: center;
+            }
             /*/UTILITY CLASSES*/
-        /*HEADER & NAVBAR*/
-        header {
-        width: 100vw;
-        border-bottom: 1px solid #e9ecef;
-        background: #F8F9FC;
-        }
-        nav {
-        width: 1100px;
-        height: 70px;
-        margin: auto;
-        background: #F8F9FC;
-        }
-        .logo_nav, .links_nav, .icons_nav {
-        width: calc(100% / 3);
-        }
-        .logo_nav img {
-        width: 130px;
-        margin-left: 10px;
-        }
-        .links_nav {
-        align-items: center;
-        }
-        .links_nav a {
-        font-weight: 700;
-        font-size: 14px;
-        color:#3c4858;
-        }
-        .icons_nav {
-        justify-content: flex-end;
-        align-items: center;
-        }
-        .icons_nav i {
-        margin: 0 10px;
-        color:#3c4858;
-        }
-        .icons_nav i:hover {
-        color: #2F55D4;
-        }
-        .jumbotron {
-        width: 1100px;
-        height: 650px;
-        margin: auto;
-        background: #F8F9FC;
-        align-items: center;
-        }
-        .left_tron {
-        width: calc(100% / 2);
-        }
-        .left_tron h2 {
-        font-size: 42px;
-        margin: 8px 0;
-        }
-        .jumbo_image {
-        width: calc(100% / 2);
-        }
-        .jumbo_image img {
-        width: 470px;
-        }
-        /*MAIN & SECTIONS*/
-        main {
-        width: 100vw;
-        }
-        .partners {
-        width: 1200px;
-        height: 80px;
-        margin: auto;
-        background: white;
-        line-height: 80px;
-        }
-        .key_features, .quick_start {
-        width: 1200px;
-        margin: auto;
-        background: white;
-        }
-        .left_key_features {
-        width: calc(100% / 2);
-        height: 120px;
-        }
-        .key_features_icons {
-        width: 100%;
-        height: 150px;
-        }
-        .feature {
-        width: calc(100% / 4);
-        }
-        .quick_start_content {
-        width: 800px;
-        }
-        .quick_start_content h6 {
-        text-align: center;\
-        }
-        .build_tools {
-        width: 1200px;
-        height: 250px;
-        margin: auto;
-        background: white;
-        }
-        .left, .right {
-        width: calc(100% / 2);
-        height: 100%;
-        }
-        .rates {
-        width: 1200px;
-        margin: auto;
-        background: white;
-        }
-        .rates_details_title {
-        width: 800px;
-        margin: auto;
-        text-align: center;
-        font-size: 20px;
-        }
-        .rates_details_description {
-        width: 500px;
-        margin: auto;
-        text-align: center;
-        }
-        .prices {
-        width: 1200px;
-        margin: auto;
-        background: white;
-        }
-        .plan {
-        width: calc(100% / 3);
-        background: white;
-        }
-        .get_started {
-        width: 1200px;
-        margin: auto;
-        background: white;
-        }
-        .get_started_content {
-        width: 800px;
-        height: 200px;
-        margin: auto;
-        text-align: center;
-        }
-        .navLinks{
-        text-decoration: none;
-        }
+            /*HEADER & NAVBAR*/
+            header {
+            width: 100vw;
+            border-bottom: 1px solid #e9ecef;
+            background: #F8F9FC;
+            }
+            nav {
+            width: 1100px;
+            height: 70px;
+            margin: auto;
+            background: #F8F9FC;
+            }
+            .logo_nav, .links_nav, .icons_nav {
+            width: calc(100% / 3);
+            }
+            .logo_nav img {
+            width: 130px;
+            margin-left: 10px;
+            }
+            .links_nav {
+            align-items: center;
+            }
+            .links_nav a {
+            font-weight: 700;
+            font-size: 14px;
+            color:#3c4858;
+            }
+            .icons_nav {
+            justify-content: flex-end;
+            align-items: center;
+            }
+            .icons_nav i {
+            margin: 0 10px;
+            color:#3c4858;
+            }
+            .icons_nav i:hover {
+            color: #2F55D4;
+            }
+            .jumbotron {
+            width: 1100px;
+            height: 650px;
+            margin: auto;
+            background: #F8F9FC;
+            align-items: center;
+            }
+            .left_tron {
+            width: calc(100% / 2);
+            }
+            .left_tron h2 {
+            font-size: 42px;
+            margin: 8px 0;
+            }
+            .jumbo_image {
+            width: calc(100% / 2);
+            }
+            .jumbo_image img {
+            width: 470px;
+            }
+            /*MAIN & SECTIONS*/
+            main {
+            width: 100vw;
+            background: white;
+            }
+            .partners {
+            width: 1100px;
+            height: 80px;
+            margin: auto;
+            background: white;
+            line-height: 80px;
+            }
+            .partners img {
+            padding: 28px 0;
+            }
+            .key_features, .quick_start {
+            width: 1100px;
+            margin: auto;
+            background: white;
+            }
+            .key_features {
+            height: 750px;
+            
+            }
+            .left_key_features {
+            width: calc(100% / 2);
+            height: 120px;
+            margin-bottom: 60px;
+            }
+            .key_features_icons {
+            width: 100%;
+            height: 150px;
+            
+            
+            }
+            .feature h5 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #3c4858;
+            }
+            .feature {
+            width: calc(100% / 4);
+            height: 280px;
+            border: 0.2rem solid #F8F9FC;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 12px;
+            }
+            .feature:hover {
+            background-color:rgba(25, 181, 254, 0.3);
+            }
+            .feature > i:first-child {
+            font-size: 25px;
+            color: #2F55D4;
+            background: #EAEEFB;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            }
+            .feature > i:last-child {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2f55d4 ;
+            }
+            .feature p {
+            margin: 20px 0;
+            color: #8492a6
+            }
+            .feature a {
+            margin-right: 10px;
+            color: #2f55d4 ;
+            }
+            .quick_start_content {
+            width: 800px;
+            }
+            .quick_start_content h6 {
+            text-align: center;
+            }
+            .build_tools {
+            width: 1100px;
+            height: 250px;
+            margin: auto;
+            background: white;
+            }
+            .left, .right {
+            width: calc(100% / 2);
+            height: 100%;
+            }
+            .rates {
+            width: 1100px;
+            margin: auto;
+            background: white;
+            }
+            .rates_details_title {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            }
+            .rates_details_description {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            }
+            .prices {
+            width: 1100px;
+            margin: auto;
+            background: white;
+            }
+            .plan {
+            width: calc(100% / 3);
+            background: white;
+            }
+            .get_started {
+            width: 1100px;
+            margin: auto;
+            background: white;
+            }
+            .get_started_content {
+            width: 800px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            }
+            .navLinks{
+            text-decoration: none;
+            }
         </style>
         <!-- /STYLE CSS -->
         <!-- /////////////////////////// -->
@@ -221,49 +266,50 @@
             </div>
         </header>
         <!-- /NAVBAR & HEADER -->
+
         <!-- MAIN & SECTIONS -->
         <main>
-            <div class="partners disp_flex flex_center flex_center">
-                Amazon
-                Google
-                Lenovo
-                PayPal
-                Shopify
-                Spotify
+            <div class="partners disp_flex flex_center">
+                <img style="width:calc(100% / 6);" src="./assets/img/amazon.svg" alt="">
+                <img style="width:calc(100% / 6);" src="./assets/img/google.svg" alt="">
+                <img style="width:calc(100% / 6);" src="./assets/img/lenovo.svg" alt="">
+                <img style="width:calc(100% / 6);" src="./assets/img/paypal.svg" alt="">
+                <img style="width:calc(100% / 6);" src="./assets/img/shopify.svg" alt="">
+                <img style="width:calc(100% / 6);" src="./assets/img/spotify.svg" alt="">
             </div>
-            <section class="key_features">
+            <section class="key_features disp_flex flex_column flex_center">
                 <div class="left_key_features">
-                    <h3>Key Features</h3>
-                    <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <h3 style="    font-size: 30px;font-weight: 600;margin-bottom: 30px;">Key Features</h3>
+                    <p style="font-size: 16px; font-weight: 400px; color: #849FC4; ">Start working with <b style="color:#2F55D4">Landrick</b> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
                 <div class="key_features_icons disp_flex">
                     <div class="feature">
-                        Icons
+                        <i class="fas fa-layer-group"></i>
                         <h5>Modular</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        <p>Composed in a pseudo-Latin language which more or less corresponds.
                         </p>
-                        <a href="">Read More</a>
+                        <a href="">Read More</a><i class="fas fa-angle-right"></i>
                     </div>
                     <div class="feature">
-                        Icons
+                        <i class="fas fa-tv"></i>
                         <h5>Modular</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        <p>Composed in a pseudo-Latin language which more or less corresponds.
                         </p>
-                        <a href="">Read More</a>
+                        <a href="">Read More</a><i class="fas fa-angle-right"></i>
                     </div>
                     <div class="feature">
-                        Icons
+                        <i class="fas fa-dot-circle"></i>
                         <h5>Modular</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        <p>Composed in a pseudo-Latin language which more or less corresponds.
                         </p>
-                        <a href="">Read More</a>
+                        <a href="">Read More</a><i class="fas fa-angle-right"></i>
                     </div>
                     <div class="feature">
-                        Icons
+                        <i class="fas fa-expand-arrows-alt"></i>
                         <h5>Modular</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        <p>Composed in a pseudo-Latin language which more or less corresponds.
                         </p>
-                        <a href="">Read More</a>
+                        <a href="">Read More</a><i class="fas fa-angle-right"></i>
                     </div>
                 </div>
             </section>
@@ -373,6 +419,7 @@
             </section>
         </main>
         <!-- /MAIN & SECTIONS -->
+        
         <!-- FOOTER -->
     <footer></footer>
     <!-- /FOOTER -->
