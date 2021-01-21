@@ -189,13 +189,18 @@
         
         .build_tools {
         width: 1100px;
-        height: 250px;
+        height: 550px;
         margin: auto;
         background: white;
+
         }
         .left, .right {
         width: calc(100% / 2);
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*align-items: center;*/
         }
         .rates {
         width: 1100px;
@@ -351,26 +356,22 @@
                     <p style="display: inline-block; color: #8492BA">Organize your data</p>
                 </div>
             </section>
-            <section class="build_tools disp_flex">
-                <div class="build_tools left">
-                    <h2><i>Build Tools and extensive documention</i></h2>
-                    <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
-                    <ul>
-                        <li>Icona - Digital Marketing Solutions for Tomorrow</li>
-                        <li>Icona - Our Talented & Experienced Marketing Agency</li>
-                        <li>Icona - Create your own skin to match your brand</li>
-                    </ul>
-                    <button>Read More</button>
+            <section class="build_tools disp_flex flex_center">
+                <div  class="build_tools left">
+                    <div style="width: 60%;margin-bottom: 28px;">
+                        <h4 style="font-size: 30px; font-weight: 600; ">Build Tools and extensive documention</h4>
+                    </div>
+                    <p style="font-size: 16px; font-weight: 400; color:#8492a6; margin-bottom: 18px; ">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                    <p style="font-size: 16px; font-weight: 400; color:#8492a6 "><i style="color:#2F5DD5; margin-right: 12px;" class="far fa-check-circle"></i>Digital Marketing Solutions for Tomorrow</p>
+                    <p style="font-size: 16px; font-weight: 400; color:#8492a6 "><i style="color:#2F5DD5; margin-right: 12px;"class="far fa-check-circle"></i>Our Talented & Experienced Marketing Agency</p>
+                    <p style="font-size: 16px; font-weight: 400; color:#8492a6 "><i style="color:#2F5DD5; margin-right: 12px;"class="far fa-check-circle"></i>Create your own skin to match your brand</p>
+                     
+                     
+                    
+                    <div style="margin: 80px 0;"><span style="margin: 20px 0;padding: 12px 18px; background: #2F55D4; color: white; font-weight: 600; border-radius: 7px; ">Read More <i style="color: white;" class="fas fa-arrow-right"></i></span></div>
                 </div>
-                <div class="build_tools right">
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
-                    <h5>Immagine</h5>
+                <div class="build_tools right disp_flex flex_center flex_column">
+                    <img style="width: 500px;align-self: center;" src="./assets/img/1.png" alt="">
                 </div>
             </section>
             <section class="rates">
