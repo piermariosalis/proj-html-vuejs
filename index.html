@@ -1,361 +1,381 @@
 <!DOCTYPE html>
 <html lang="it-IT">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- development version, includes helpful console warnings -->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-	<title>Boolean Project with VueJS</title>
-
-	<!-- /////////////////////////// -->
-	<!-- STYLE CSS -->
-	<style>
-		/*RESET*/
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-
-		}
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <title>Boolean Project with VueJS</title>
+        <!-- /////////////////////////// -->
+        <!-- STYLE CSS -->
+        <style>
+            /*RESET*/
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+            }
         body {
-            background: blue;
-
+        background: blue;
         }
-
         li {
-            list-style: none;
-            display: inline-block;
+        list-style: none;
+        display: inline-block;
         }
-
-		/*UTILITY CLASSES*/
-		.disp_flex{
-			display: flex;
-		}
-
-		.flex_column {
-			flex-direction: column;
-		}
-
+            /*UTILITY CLASSES*/
+            .disp_flex{
+                display: flex;
+            }
+            .flex_column {
+                flex-direction: column;
+            }
         .flex_center {
-            justify-content: center;
+        justify-content: center;
         }
-
-		/*/UTILITY CLASSES*/
-
+            /*/UTILITY CLASSES*/
         /*HEADER & NAVBAR*/
         header {
-            width: 100vw;
-            border-bottom: 1px solid black;
+        width: 100vw;
+        border-bottom: 1px solid #e9ecef;
+        background: #F8F9FC;
         }
         nav {
-            width: 1200px;
-            height: 70px;
-            margin: auto;
-            background: white;
+        width: 1100px;
+        height: 70px;
+        margin: auto;
+        background: #F8F9FC;
         }
-
         .logo_nav, .links_nav, .icons_nav {
-            width: calc(100% / 3);
+        width: calc(100% / 3);
         }
-
+        .logo_nav img {
+        width: 130px;
+        margin-left: 10px;
+        }
+        .links_nav {
+        align-items: center;
+        }
+        .links_nav a {
+        font-weight: 700;
+        font-size: 14px;
+        color:#3c4858;
+        }
+        .icons_nav {
+        justify-content: flex-end;
+        align-items: center;
+        }
+        .icons_nav i {
+        margin: 0 10px;
+        color:#3c4858;
+        }
+        .icons_nav i:hover {
+        color: #2F55D4;
+        }
         .jumbotron {
-            width: 1200px;
-            margin: auto;
-            background: white;
-
+        width: 1100px;
+        height: 650px;
+        margin: auto;
+        background: #F8F9FC;
+        align-items: center;
         }
-
+        .left_tron {
+        width: calc(100% / 2);
+        }
+        .left_tron h2 {
+        font-size: 42px;
+        margin: 8px 0;
+        }
+        .jumbo_image {
+        width: calc(100% / 2);
+        }
+        .jumbo_image img {
+        width: 470px;
+        }
         /*MAIN & SECTIONS*/
-
         main {
-            width: 100vw;
+        width: 100vw;
         }
-
         .partners {
-            width: 1200px;
-            height: 80px;
-            margin: auto;
-            background: white;
-            line-height: 80px;
-
+        width: 1200px;
+        height: 80px;
+        margin: auto;
+        background: white;
+        line-height: 80px;
         }
         .key_features, .quick_start {
-            width: 1200px;
-            margin: auto;
-            background: white;
+        width: 1200px;
+        margin: auto;
+        background: white;
         }
-
         .left_key_features {
-            width: calc(100% / 2);
-            height: 120px;
+        width: calc(100% / 2);
+        height: 120px;
         }
         .key_features_icons {
-            width: 100%;
-            height: 150px;
+        width: 100%;
+        height: 150px;
         }
         .feature {
-            width: calc(100% / 4);
+        width: calc(100% / 4);
         }
-
         .quick_start_content {
-            width: 800px;
+        width: 800px;
         }
-
         .quick_start_content h6 {
-            text-align: center;\
+        text-align: center;\
         }
         .build_tools {
-            width: 1200px;
-            height: 250px;
-            margin: auto;
-            background: white;
+        width: 1200px;
+        height: 250px;
+        margin: auto;
+        background: white;
         }
         .left, .right {
-            width: calc(100% / 2);
-            height: 100%;
+        width: calc(100% / 2);
+        height: 100%;
         }
-
         .rates {
-            width: 1200px;
-            margin: auto;
-            background: white;
+        width: 1200px;
+        margin: auto;
+        background: white;
         }
-
         .rates_details_title {
-            width: 800px;
-            margin: auto;
-            text-align: center;
-            font-size: 20px;
+        width: 800px;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
         }
         .rates_details_description {
-            width: 500px;
-            margin: auto;
-            text-align: center;
-
+        width: 500px;
+        margin: auto;
+        text-align: center;
         }
         .prices {
-            width: 1200px;
-            margin: auto;
-            background: white;
+        width: 1200px;
+        margin: auto;
+        background: white;
         }
-
         .plan {
-            width: calc(100% / 3);
-            background: white;
+        width: calc(100% / 3);
+        background: white;
         }
         .get_started {
-            width: 1200px;
-            margin: auto;
-            background: white;
+        width: 1200px;
+        margin: auto;
+        background: white;
         }
         .get_started_content {
-            width: 800px;
-            height: 200px;
-            margin: auto;
-            text-align: center;
+        width: 800px;
+        height: 200px;
+        margin: auto;
+        text-align: center;
         }
-
-	</style>
-	<!-- /STYLE CSS -->
-	<!-- /////////////////////////// -->
-
-</head>
-<body>
-	<!-- NAVBAR & HEADER -->
-	
-	<header>
-     <nav class="disp_flex">
-         <div class="logo_nav">
-             <img src="" alt="">
-             Landrick
-         </div>
-         <div class="links_nav">
-            <ul>
-             <li>Home</li>
-             <li>Landing</li>
-             <li>Pages</li>
-             <li>Docs</li>
-         </ul>
-         </div>
-         <div class="icons_nav">
-             Icona Uno
-             Icona Due
-             Icona Tre
-             Icona Quattro
-         </div>
-     </nav> 
-     <div class="jumbotron">
-         <div class="left_tron">
-             Development
-             <h2>A Complete Developer Toolset</h2>
-             <p>Lorem ipsum dolor sit amet consectetur.</p>
-             <button>Get Started</button>
-             <button>Documentation</button>
-             <p>Current Version</p>
-
-         </div>
-     </div>  
-    </header>
-	<!-- /NAVBAR & HEADER -->
-
-	<!-- MAIN & SECTIONS -->
-	<main>
-		<div class="partners disp_flex flex_center">
-            Amazon
-            Google
-            Lenovo
-            PayPal
-            Shopify
-            Spotify
-        </div>
-		<section class="key_features">
-            <div class="left_key_features">
-                <h3>Key Features</h3>
-            <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-            </div>
-            <div class="key_features_icons disp_flex">
-                <div class="feature">
-                    Icons
-                    <h5>Modular</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
-                    </p>
-                    <a href="">Read More</a>
+        .navLinks{
+        text-decoration: none;
+        }
+        </style>
+        <!-- /STYLE CSS -->
+        <!-- /////////////////////////// -->
+    </head>
+    <body>
+        <!-- NAVBAR & HEADER -->
+        
+        <header id="vue_header">
+            <nav class="disp_flex">
+                <div class="logo_nav disp_flex flex_column flex_center">
+                    <img src="./assets/img/logo-dark.png" alt="">
+                    
                 </div>
-                <div class="feature">
-                    Icons
-                    <h5>Modular</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
-                    </p>
-                    <a href="">Read More</a>
-                </div>
-                <div class="feature">
-                    Icons
-                    <h5>Modular</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
-                    </p>
-                    <a href="">Read More</a>
-                </div>
-                <div class="feature">
-                    Icons
-                    <h5>Modular</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
-                    </p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-        </section>
-		<section class="quick_start disp_flex flex_center">
-            <div class="quick_start_content">
-            <h6><b>Quickstart</b></h6>
-            <p>Start working with Landrick that can provide everything you need to generate awarness, drive traffic, connect.</p>
-            <h6>Immagine</h6>
-            <h6>Immagine</h6>
-            <h6>Immagine</h6>
-            <h6>Immagine</h6>
-            <h6>Immagine</h6>
-            <h6>Immagine</h6>
-            <!-- <img src="" alt=""> -->
-            icona Organize you data Icona Work With any team
-            </div>
-        </section>
-		<section class="build_tools disp_flex">
-            <div class="build_tools left">
-                <h2><i>Build Tools and extensive documention</i></h2>
-                <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
-                <ul>
-                    <li>Icona - Digital Marketing Solutions for Tomorrow</li>
-                    <li>Icona - Our Talented & Experienced Marketing Agency</li>
-                    <li>Icona - Create your own skin to match your brand</li>
-                </ul>
-                <button>Read More</button>
-            </div>
-            <div class="build_tools right">
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-                <h5>Immagine</h5>
-            </div>
-        </section>
-		<section class="rates">
-            <div class="rates_details_title">
-                <h2>Our Rates for developer from landrick team</h2>
-            </div>
-            <div class="rates_details_description">
-                <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-            </div>
-            <div class="prices disp_flex">
-                <div class="plan">
-                    <button>Basic</button>
-                    <h2>$9.00</h2>
-                    <p>Per Month</p>
-                    <p>All the basics for businesses that are just getting started.</p>
+                <div class="links_nav disp_flex flex_column flex_center">
                     <ul>
-                        <li>Full Access</li>
-                        <li>Enhanced Security</li>
-                        <li>Source Files</li>
-                        <li>1 Domain Free</li>
-                        <li>Enhanced Security</li>
-                                                
+                        <li style="margin-right: 50px;" v-html='Home'> </li>
+                        <li v-html='Landing'> </li> <i style="margin-right: 20px;" class="fas fa-chevron-down"></i>
+                        <li v-html='Pages'> </li> <i style="margin-right: 20px;" class="fas fa-chevron-down"></i>
+                        <li v-html='Docs'> </li> <i class="fas fa-chevron-down"></i>
                     </ul>
-                    <button>Buy Now</button>
-                    <p>*No credit card required</p>
                 </div>
-                <div class="plan">
-                    <button>Business</button>
-                    <h2>$39.00</h2>
-                    <p>Per Month</p>
-                    <p>Better for growing businesses that want more customers.</p>
-                    <ul>
-                        <li>Full Access</li>
-                        <li>Enhanced Security</li>
-                        <li>Source Files</li>
-                        <li>1 Domain Free</li>
-                        <li>Enhanced Security</li>
-                                                
-                    </ul>
-                    <button>Buy Now</button>
-                    <p>*No credit card required</p>
+                <div class="icons_nav disp_flex">
+                    <i class="fas fa-search"></i>
+                    <i style="font-size: 30px;"  class="fab fa-github-square"></i>
+                    <i style="font-size: 30px;" class="fab fa-stack-overflow"></i>
+                    <i style="font-size: 30px;" class="fas fa-user-circle"></i>
                 </div>
-                 <div class="plan">
-                    <button>Enterprise</button>
-                    <h2>$79.00</h2>
-                    <p>Per Month</p>
-                    <p>Advanced features for pros who need more customization.</p>
-                    <ul>
-                        <li>Full Access</li>
-                        <li>Enhanced Security</li>
-                        <li>Source Files</li>
-                        <li>1 Domain Free</li>
-                        <li>Enhanced Security</li>
-                                                
-                    </ul>
-                    <button>Buy Now</button>
-                    <p>*No credit card required</p>
+            </nav>
+            <div class="jumbotron disp_flex">
+                <div class="left_tron">
+                    <span style="font-size: 12px; font-weight: 800; background: #E4E9F8; padding: 4px 10px; border-radius: 15px; color: #2f55d4;">Development</span>
+                    <div style="width: 70%;"><h2>A Complete Developer Toolset</h2></div>
+                    <p style="font-size: 18px; font-weight: 400px; color: #849FC4; padding: 22px 0">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                    <span style="color: white; font-size: 16px; font-weight: 600; background: #2f55d4; padding: 9px 20px; border-radius: 8px;">Get Started</span>
+                    <span style="color: blue; font-size: 16px; font-weight: 600; background: #FFFFFF; padding: 9px 20px; border-radius: 8px; border: 1px solid blue; margin-left: 12px;">Documentation</span>
+                    <p style="margin: 30px 0;font-size: 15px; font-weight: 400px; color: #849FC4;">Current Version: v2.6.0</p>
                 </div>
-
+                <div class="jumbo_image disp_flex flex_center">
+                    <img src="./assets/img/about.png" alt="">
+                </div>
             </div>
-        </section>
-		<section>
-            <div class="get_started">
-                <div class="get_started_content">
-                    <h3>Want to be among the first to find out?</h3>
+        </header>
+        <!-- /NAVBAR & HEADER -->
+        <!-- MAIN & SECTIONS -->
+        <main>
+            <div class="partners disp_flex flex_center flex_center">
+                Amazon
+                Google
+                Lenovo
+                PayPal
+                Shopify
+                Spotify
+            </div>
+            <section class="key_features">
+                <div class="left_key_features">
+                    <h3>Key Features</h3>
                     <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                    <input type="email" placeholder="Email Address">
-                    <button>Get Started</button>
                 </div>
-            </div>      
-        </section>
-	</main>
-	<!-- /MAIN & SECTIONS -->
-
-	<!-- FOOTER -->
-	<footer></footer>
-	<!-- /FOOTER -->
-<script src="./assets/js/main.js"></script>
+                <div class="key_features_icons disp_flex">
+                    <div class="feature">
+                        Icons
+                        <h5>Modular</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        </p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="feature">
+                        Icons
+                        <h5>Modular</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        </p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="feature">
+                        Icons
+                        <h5>Modular</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        </p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="feature">
+                        Icons
+                        <h5>Modular</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa!
+                        </p>
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+            </section>
+            <section class="quick_start disp_flex flex_center">
+                <div class="quick_start_content">
+                    <h6><b>Quickstart</b></h6>
+                    <p>Start working with Landrick that can provide everything you need to generate awarness, drive traffic, connect.</p>
+                    <h6>Immagine</h6>
+                    <h6>Immagine</h6>
+                    <h6>Immagine</h6>
+                    <h6>Immagine</h6>
+                    <h6>Immagine</h6>
+                    <h6>Immagine</h6>
+                    <!-- <img src="" alt=""> -->
+                    icona Organize you data Icona Work With any team
+                </div>
+            </section>
+            <section class="build_tools disp_flex">
+                <div class="build_tools left">
+                    <h2><i>Build Tools and extensive documention</i></h2>
+                    <p>You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                    <ul>
+                        <li>Icona - Digital Marketing Solutions for Tomorrow</li>
+                        <li>Icona - Our Talented & Experienced Marketing Agency</li>
+                        <li>Icona - Create your own skin to match your brand</li>
+                    </ul>
+                    <button>Read More</button>
+                </div>
+                <div class="build_tools right">
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                    <h5>Immagine</h5>
+                </div>
+            </section>
+            <section class="rates">
+                <div class="rates_details_title">
+                    <h2>Our Rates for developer from landrick team</h2>
+                </div>
+                <div class="rates_details_description">
+                    <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                </div>
+                <div class="prices disp_flex">
+                    <div class="plan">
+                        <button>Basic</button>
+                        <h2>$9.00</h2>
+                        <p>Per Month</p>
+                        <p>All the basics for businesses that are just getting started.</p>
+                        <ul>
+                            <li>Full Access</li>
+                            <li>Enhanced Security</li>
+                            <li>Source Files</li>
+                            <li>1 Domain Free</li>
+                            <li>Enhanced Security</li>
+                            
+                        </ul>
+                        <button>Buy Now</button>
+                        <p>*No credit card required</p>
+                    </div>
+                    <div class="plan">
+                        <button>Business</button>
+                        <h2>$39.00</h2>
+                        <p>Per Month</p>
+                        <p>Better for growing businesses that want more customers.</p>
+                        <ul>
+                            <li>Full Access</li>
+                            <li>Enhanced Security</li>
+                            <li>Source Files</li>
+                            <li>1 Domain Free</li>
+                            <li>Enhanced Security</li>
+                            
+                        </ul>
+                        <button>Buy Now</button>
+                        <p>*No credit card required</p>
+                    </div>
+                    <div class="plan">
+                        <button>Enterprise</button>
+                        <h2>$79.00</h2>
+                        <p>Per Month</p>
+                        <p>Advanced features for pros who need more customization.</p>
+                        <ul>
+                            <li>Full Access</li>
+                            <li>Enhanced Security</li>
+                            <li>Source Files</li>
+                            <li>1 Domain Free</li>
+                            <li>Enhanced Security</li>
+                            
+                        </ul>
+                        <button>Buy Now</button>
+                        <p>*No credit card required</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="get_started">
+                    <div class="get_started_content">
+                        <h3>Want to be among the first to find out?</h3>
+                        <p>Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <input type="email" placeholder="Email Address">
+                        <button>Get Started</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- /MAIN & SECTIONS -->
+        <!-- FOOTER -->
+    <footer></footer>
+    <!-- /FOOTER -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
